@@ -7,6 +7,7 @@
 //!
 //! :copyright: (c) 2013 by Ihor Kalnytskyi
 //! :license: BSD, see LICENSE for details
+//! :extended by: Denwork-man
 //!
 
 #ifndef TERMCOLOR_HPP_
@@ -764,6 +765,231 @@ namespace termcolor
         #endif
         }
 
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_grey(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[30;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->grey(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_red(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[31;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->red(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_green(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[32;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->green(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_yellow(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[33;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->yellow(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_blue(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[34;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->blue(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_magenta(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[35;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->magenta(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_cyan(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[36;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->cyan(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_white(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[37;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->white(stream);
+        #endif
+        }
+        return stream;
+    }
+
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_bright_grey(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[90;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->grey(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_bright_red(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[91;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->red(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_bright_green(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[92;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->green(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_bright_yellow(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[93;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->yellow(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_bright_blue(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[94;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->blue(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_bright_magenta(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[95;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->magenta(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_bright_cyan(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[96;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->cyan(stream);
+        #endif
+        }
+        return stream;
+    }
+
+    template <typename CharT>
+    std::basic_ostream<CharT>& dark_bright_white(std::basic_ostream<CharT>& stream)
+    {
+        if (_internal::is_colorized(stream))
+        {
+        #if defined(TERMCOLOR_USE_ANSI_ESCAPE_SEQUENCES)
+            stream << "\033[97;2m";
+        #elif defined(TERMCOLOR_USE_WINDOWS_API)
+            this->white(stream);
+        #endif
+        }
         return stream;
     }
 
